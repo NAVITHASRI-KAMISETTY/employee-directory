@@ -1,0 +1,55 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <h1>Employee Directory</h1>
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Search by name or email">
+    <select id="department-filter">
+      <option value="">All Departments</option>
+      <option value="HR">HR</option>
+      <option value="IT">IT</option>
+      <option value="Sales">Sales</option>
+    </select>
+    <select id="sort-by">
+      <option value="">Sort By</option>
+      <option value="firstName">First Name</option>
+      <option value="department">Department</option>
+    </select>
+    <button id="add-employee-btn">+ Add Employee</button>
+  </div>
+
+  <div class="pagination-controls">
+    <label for="items-per-page">Items per page:</label>
+    <select id="items-per-page">
+      <option value="5">5</option>
+      <option value="10" selected>10</option>
+      <option value="25">25</option>
+    </select>
+    <button id="prev-page">Previous</button>
+    <span id="page-info">Page 1</span>
+    <button id="next-page">Next</button>
+  </div>
+
+  <div id="employee-list-container"></div>
+
+  <div id="employee-form" style="display: none;">
+    <input type="text" id="first-name" placeholder="First Name">
+    <input type="text" id="last-name" placeholder="Last Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="department" placeholder="Department">
+    <input type="text" id="role" placeholder="Role">
+    <button class="save-btn">Save</button>
+    <button class="cancel-btn">Cancel</button>
+  </div>
+
+  <script src="../static/data.js"></script>
+  <script src="../static/app.js"></script>
+</body>
+</html>
